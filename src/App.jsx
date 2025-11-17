@@ -1,26 +1,24 @@
-import { useState } from 'react'
+import Hero from './components/Hero'
+import Problem from './components/Problem'
+import Modes from './components/Modes'
+import Why from './components/Why'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen w-full bg-[#0a0a0b]">
+      <Hero />
+      <section id="tagline" className="bg-[#0a0a0b] px-6 py-12">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="text-sm leading-relaxed text-white/70">
+            Quillio blends a calm journaling rhythm with a powerful canvas for deep work. It remembers your journey and helps you ship what matters. Minimal, private, and thoughtfully intelligent.
+          </p>
         </div>
-      </div>
+      </section>
+      <Modes />
+      <Problem />
+      <Why />
+      <Footer />
     </div>
   )
 }
